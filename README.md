@@ -1,24 +1,13 @@
-# README
+# Quick Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 6 API monolith with Create React App frontend with Typescript bindings
 
-Things you may want to cover:
+Use case:
 
-* Ruby version
+* Root app.tsx renders as static asset in `public/index.html`
 
-* System dependencies
+* Rails backend in API only mode
 
-* Configuration
+* PostgreSQL DB
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Single command development environment: `foreman start`
