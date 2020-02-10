@@ -6,7 +6,7 @@ ruby '2.5.7'
 gem 'rails', '~> 6.0.1'
 gem 'pg', '~> 1.2.2'
 gem 'puma', '~> 4.1'
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '~> 1.4.5'
 gem 'foreman'
 
 group :development, :test do
