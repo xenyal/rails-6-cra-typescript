@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "cd client && yarn run test",
+    "test:ci": "cd client && yarn run test:ci",
     "start": "cd client && yarn start",
     "build": "cd client && yarn build",
     "install": "cd client && yarn"
