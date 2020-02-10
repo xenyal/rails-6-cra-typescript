@@ -1,4 +1,4 @@
-class Api::V1::TestsController < ApplicationController
+class Api::V1::StaticController < ApplicationController
   def index
     render json: { users: ['John', 'Kate', 'Harry', 'Mary'] }
   end
