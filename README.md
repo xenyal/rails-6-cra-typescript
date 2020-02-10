@@ -1,3 +1,5 @@
+![Rails & React Tests](https://github.com/xenyal/rails-6-cra-typescript/workflows/Rails%20&%20React%20Tests/badge.svg?branch=master)
+
 # Quick Overview
 
 Rails 6 API monolith with Create React App frontend with Typescript bindings
