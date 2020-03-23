@@ -6,11 +6,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Do NOT change the version away from pg 11.5
+    # > 11 and 12 both has docker container issues
+    # > on Github Actions where healthcheck will die
     services:
       postgres:
-        image: postgres:12
+        image: postgres:11.5
         ports: ["5432:5432"]
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - uses: actions/checkout@v2
@@ -20,7 +27,7 @@ jobs:
         with:
           ruby-version: 2.5.7
 
-      - name: Install PostgreSQL 12 client
+      - name: Install PostgreSQL 11.5 client
         run: |
           sudo apt-get -yqq install libpq-dev
     
@@ -30,7 +37,7 @@ jobs:
           PGUSER: postgres
           RAILS_ENV: test
         run: |
-          gem install bundler -v 1.17.3
+          gem install bundler
           bundle install --jobs 4 --retry 3
           bin/rails db:setup
           bundle exec rake test
