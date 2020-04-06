@@ -1,0 +1,9 @@
+entrypoint: bundle exec rails s -u Puma --port $PORT
+runtime: ruby25
+
+automatic_scaling:
+  max_instances: 1
+  min_instances: 0
+
+env_variables:
+  SECRET_KEY_BASE: 6236bdccd8b60dc52403594bbc752033c6193d71f0ef50ac41a54d29e1a034b7181ad88e920ec6179d8e64b5b0eaa494fd46eda57edbbab1853eb145374276f9
