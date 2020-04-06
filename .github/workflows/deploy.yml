@@ -16,7 +16,7 @@ jobs:
         node-version: '10.x'
     - run: |
         yarn install
-        yarn run build NODE_ENV=production
+        yarn run build
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
