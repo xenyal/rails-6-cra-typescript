@@ -16,6 +16,9 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <div>
+        <span>This was an auto-deployed message!</span>
+      </div>
     </div>
   );
 }
